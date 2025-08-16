@@ -1,14 +1,17 @@
 import argparse
 import os
 import sys
+import logging
 from .reader import CsvReader
 from .validator import Validator
 from config.config import get_config
 
+logger = logging.getLogger(__name__)
 
 def Main(args):
-    config = get_config()
     filename = args.file
+    config = get_config()
+    logging.basicConfig(filename="main.py", level=logging.INFO)
     csv_reader = CsvReader()
     file_path = os.path.abspath(os.path.join(config.input_dir, filename))
     if(os.path.exists(file_path)):
@@ -17,11 +20,11 @@ def Main(args):
         if data is not None:
             validator = Validator(data)
             if validator.is_empty:
-                print("File is empty")
+                logger.info("File is empty")
             elif validator.is_null:
-                print("File has null values")
+                logger.info("File has null values")
             else:
-                print("File is valid")
+                logger.info("File is valid")
   
     else:
         print("File does not exist")
