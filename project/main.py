@@ -1,34 +1,22 @@
 import argparse
 import os
 import sys
-import logging
+from .logging import Logger
 from .reader import CsvReader
-from .validator import Validator
+from .processor import process_file
 from config.config import get_config
 
-logger = logging.getLogger(__name__)
 
 def Main(args):
     filename = args.file
-    config = get_config()
-    logging.basicConfig(filename="main.py", level=logging.INFO)
-    csv_reader = CsvReader()
-    file_path = os.path.abspath(os.path.join(config.input_dir, filename))
-    if(os.path.exists(file_path)):
-        print(f"File {filename} exists")
-        data = csv_reader.read_csv(file_path, args.date)
-        if data is not None:
-            validator = Validator(data)
-            if validator.is_empty:
-                logger.info("File is empty")
-            elif validator.is_null:
-                logger.info("File has null values")
-            else:
-                logger.info("File is valid")
-  
-    else:
-        print("File does not exist")
-        sys.exit(1)
+    cfg = get_config()
+    ##validate config
+    cfg.validate()
+    logger_instance = Logger(cfg.logs_dir)
+    logger = logger_instance.setup_logging()
+    input_dir = cfg.input_dir
+    file_path = os.path.join(input_dir, filename)
+    process_file(file_path, cfg, logger)
 
 
 if __name__ == "__main__":
