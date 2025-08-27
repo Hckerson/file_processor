@@ -8,7 +8,7 @@ from dataclasses import dataclass
 DEFAULT_CONFIG = {
     "required_column": ["name", "date", "amount"],
     "column_type": {"name": "str", "date": "date", "amount": "float"},
-    "date_format": "%Y-%m-%d",
+    "date_format": "%Y-%d-%m",
     "currency_conversion": {"from": "EUR", "to": "USD"},
     "output_currency_symbol": "$",
 }

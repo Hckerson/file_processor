@@ -1,15 +1,4 @@
-2025-08-26 16:09:42.788 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:10:22.338 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:15:41.614 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:16:16.020 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:16:16.024 | INFO     | project.processor:process_file:22 - Required columns: ['name', 'date', 'amount']
-2025-08-26 16:16:16.025 | INFO     | project.processor:process_file:23 - Available columns: ['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
-2025-08-26 16:16:30.508 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:16:30.513 | INFO     | project.processor:process_file:22 - Required columns: ['name', 'date', 'amount']
-2025-08-26 16:16:30.513 | INFO     | project.processor:process_file:23 - Available columns: ['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
-2025-08-26 16:16:41.374 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:16:51.745 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:17:01.051 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:17:50.677 | INFO     | project.processor:process_file:6 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/titanic.csv
-2025-08-26 16:17:50.681 | INFO     | project.processor:process_file:22 - Required columns: ['name', 'date', 'amount']
-2025-08-26 16:17:50.682 | INFO     | project.processor:process_file:23 - Available columns: ['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+2025-08-27 01:55:28.600 | INFO     | project.processor:process_file:9 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-27 01:57:44.479 | INFO     | project.processor:process_file:9 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-27 01:57:44.483 | ERROR    | project.processor:process_file:47 - Type validation failed for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv: ['date']
+2025-08-27 02:03:32.595 | INFO     | project.processor:process_file:9 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
