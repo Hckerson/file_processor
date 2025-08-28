@@ -1,3 +1,4 @@
+import os
 import shutil
 import pandas as pd
 from pathlib import Path
@@ -100,6 +101,7 @@ def process_file(file_path: Path, cfg: AppConfig, logger):
             move_file("error", file_path, processed_dir)
             return
         data = data_converted["data"]
+        move_file("success", file_path, processed_dir)
     except Exception as e:
         logger.error(
             f"Failed to convert dataframe to required output format for file {file_path}: {e}  "
@@ -107,18 +109,19 @@ def process_file(file_path: Path, cfg: AppConfig, logger):
         return
 
     ## output transformed data
-
+    
     parsed_data = loads(data)
     file_name = output_dir / f"{file_path.stem}.json"
     with open(file_name, "w") as outfile:
         outfile.write(dumps(parsed_data, indent=2))
 
 
-def move_file(status: str, file_path: Path, dest: Path):
+def move_file(status: str, file_path: Path, dest: Path): 
     try:
         destination_address = (
-            dest / "processed" if status == "success" else dest / "error"
+            dest / "success" if status == "success" else dest / "error"
         )
+        os.makedirs(destination_address, exist_ok=True)
         shutil.move(str(file_path), str(destination_address))
     except Exception as e:
-        print(f"Failed to move file {file_path} to {destination_address}: {e}")
+        print(f"Failed to move file {file_path} to {destination_address}: {e.__class__.__name__}")

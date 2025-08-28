@@ -1,4 +1,16 @@
-2025-08-27 01:55:28.600 | INFO     | project.processor:process_file:9 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
-2025-08-27 01:57:44.479 | INFO     | project.processor:process_file:9 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
-2025-08-27 01:57:44.483 | ERROR    | project.processor:process_file:47 - Type validation failed for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv: ['date']
-2025-08-27 02:03:32.595 | INFO     | project.processor:process_file:9 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:40:54.390 | INFO     | project.processor:process_file:13 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:40:54.417 | INFO     | project.transformer:convert_date:16 - Transforming date column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:40:54.419 | INFO     | project.transformer:currency_converter:30 - Transforming amount column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:40:54.420 | INFO     | project.transformer:data_converter:41 - Converting dataframe to required output format
+2025-08-28 11:47:46.318 | INFO     | project.processor:process_file:13 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:47:46.359 | INFO     | project.transformer:convert_date:16 - Transforming date column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:47:46.360 | INFO     | project.transformer:currency_converter:30 - Transforming amount column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:47:46.361 | INFO     | project.transformer:data_converter:41 - Converting dataframe to required output format
+2025-08-28 11:48:24.077 | INFO     | project.processor:process_file:13 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:48:24.126 | INFO     | project.transformer:convert_date:16 - Transforming date column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:48:24.128 | INFO     | project.transformer:currency_converter:30 - Transforming amount column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:48:24.129 | INFO     | project.transformer:data_converter:41 - Converting dataframe to required output format
+2025-08-28 11:54:35.332 | INFO     | project.processor:process_file:14 - Processing file: /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:54:35.362 | INFO     | project.transformer:convert_date:16 - Transforming date column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:54:35.363 | INFO     | project.transformer:currency_converter:30 - Transforming amount column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
+2025-08-28 11:54:35.363 | INFO     | project.transformer:data_converter:41 - Converting dataframe to required output format

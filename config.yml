@@ -5,9 +5,11 @@ column_type:
 currency_conversion:
   from: EUR
   to: USD
+currency_rate: 1.6
 date_format: '%Y-%d-%m'
 output_currency_symbol: $
 required_column:
 - name
 - date
 - amount
+required_output_format: json

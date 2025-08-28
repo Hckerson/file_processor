@@ -23,6 +23,7 @@ class Transformer:
                 return {"status": "success"}
             return {"status": "failed"}
         except Exception as e:
+            self.logger.error(f"Date conversion error for file {self.file_path}: {e}")
             return {"status": "error"}
 
     def currency_converter(self, rate: str):
@@ -31,6 +32,9 @@ class Transformer:
             self.data["amount"] = self.data["amount"] * rate
             return {"status": "success"}
         except Exception as e:
+            self.logger.error(
+                f"Currency conversion error for file {self.file_path}: {e}"
+            )
             return {"status": "error"}
 
     def data_converter(self):
@@ -41,8 +45,8 @@ class Transformer:
         }
         try:
             ## get required format
-            format = self.cfg.get("required_output_format")
-            json_format = format_mapper.get(format)
+            output_format = self.cfg.get("required_output_format")
+            json_format = format_mapper.get(output_format)
             return {"status": "success", "data": json_format}
         except Exception as e:
             return {"status": "error"}

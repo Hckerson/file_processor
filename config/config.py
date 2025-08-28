@@ -12,7 +12,7 @@ DEFAULT_CONFIG = {
     "currency_conversion": {"from": "EUR", "to": "USD"},
     "currency_rate": 1.6,
     "output_currency_symbol": "$",
-    "required_output_format": "json"
+    "required_output_format": "json",
 }
 
 
@@ -31,7 +31,7 @@ class AppConfig:
     output_dir: str = os.path.join(project_root, "output")
     input_dir: str = os.path.join(project_root, "input")
     logs_dir: str = os.path.join(output_dir, "logs")
-    processed_dir: str = os.path.join(logs_dir, "processed")
+    processed_dir: str = os.path.join(output_dir, "processed")
 
     ## config file
     CONFIG_FILE = "config.yml"
@@ -47,6 +47,14 @@ class AppConfig:
             raise AppConfigError("required_column is missing in config")
         if "column_type" not in self._data:
             raise AppConfigError("column_type is missing in config")
+        if "date_format" not in self._data:
+            raise AppConfigError("date_format is missing in config")
+        if "currency_conversion" not in self._data:
+            raise AppConfigError("currency_conversion is missing in config")
+        if "currency_rate" not in self._data:
+            raise AppConfigError("currency_rate is missing in config")
+        if "required_output_format" not in self._data:
+            raise AppConfigError("required_output_format is missing in config")
 
     def get(self, key: str, default=None):
         return self._data.get(key, default)

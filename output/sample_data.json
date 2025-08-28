@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Alice",
+    "date": 1735689600000,
+    "amount": 192.8
+  },
+  {
+    "name": "Bob",
+    "date": 1739577600000,
+    "amount": 545.2
+  },
+  {
+    "name": "Charlie",
+    "date": 1741564800000,
+    "amount": 896.0
+  },
+  {
+    "name": "Diana",
+    "date": 1745107200000,
+    "amount": 125.2
+  }
+]
