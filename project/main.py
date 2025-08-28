@@ -1,9 +1,8 @@
-import argparse
 import os
 import sys
+import argparse
 from pathlib import Path
 from .logging import Logger
-from .reader import CsvReader
 from .processor import process_file
 from config.config import get_config
 
@@ -16,7 +15,7 @@ def Main(args):
     logger = logger_instance.setup_logging()
     input_dir = cfg.input_dir
     file_path = Path(input_dir) / filename
-    process_file(file_path, cfg, logger)
+    process_file(file_path, cfg, logger) 
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ column_type:
 currency_conversion:
   from: EUR
   to: USD
-date_format: '%Y-%m-%d'
+date_format: '%Y-%d-%m'
 output_currency_symbol: $
 required_column:
 - name

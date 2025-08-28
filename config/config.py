@@ -10,7 +10,9 @@ DEFAULT_CONFIG = {
     "column_type": {"name": "str", "date": "date", "amount": "float"},
     "date_format": "%Y-%d-%m",
     "currency_conversion": {"from": "EUR", "to": "USD"},
+    "currency_rate": 1.6,
     "output_currency_symbol": "$",
+    "required_output_format": "json"
 }
 
 
@@ -29,6 +31,7 @@ class AppConfig:
     output_dir: str = os.path.join(project_root, "output")
     input_dir: str = os.path.join(project_root, "input")
     logs_dir: str = os.path.join(output_dir, "logs")
+    processed_dir: str = os.path.join(logs_dir, "processed")
 
     ## config file
     CONFIG_FILE = "config.yml"
