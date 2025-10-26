@@ -6,6 +6,7 @@ from loguru import logger
 class Logger:
     def __init__(self, logs_dir: Path):
         self.logs_dir = logs_dir
+        self.setup_logging()
 
     def setup_logging(self):
         logger.remove()
@@ -15,4 +16,4 @@ class Logger:
         logger.add(
             f"{self.logs_dir}/error.logs", level="ERROR", enqueue=True, rotation="10 MB"
         )
-        return logger
+        

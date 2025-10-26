@@ -18,7 +18,6 @@ DEFAULT_CONFIG = {
 
 class AppConfigError(Exception):
     """Error class for handling config errors"""
-
     pass
 
 
@@ -29,7 +28,7 @@ class AppConfig:
 
     ## Paths
     output_dir: str = os.path.join(project_root, "output")
-    input_dir: str = os.path.join(project_root, "input")
+    input_dir: str = os.path.join(project_root, "data")
     logs_dir: str = os.path.join(output_dir, "logs")
     processed_dir: str = os.path.join(output_dir, "processed")
 

@@ -11,11 +11,10 @@ def Main(args):
     filename = args.file
     cfg = get_config()
     cfg.validate()
-    logger_instance = Logger(Path(cfg.logs_dir))
-    logger = logger_instance.setup_logging()
     input_dir = cfg.input_dir
     file_path = Path(input_dir) / filename
-    process_file(file_path, cfg, logger) 
+    Logger(Path(cfg.logs_dir))
+    process_file(file_path, cfg) 
 
 
 if __name__ == "__main__":

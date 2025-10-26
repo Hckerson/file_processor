@@ -2,7 +2,7 @@
 
 A Python-based CSV file processing system that validates, transforms, and converts data files with comprehensive logging and error handling.
 
-> **A robust CSV data processor with validation, transformation, and multi-format output capabilities. Features column validation, data type checking, date/currency conversion, and comprehensive error handling with detailed logging.**
+> **CSV processor with validation, transformation, and JSON output.**
 
 ## Overview
 

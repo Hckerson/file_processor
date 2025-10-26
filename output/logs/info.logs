@@ -14,3 +14,5 @@
 2025-08-28 11:54:35.362 | INFO     | project.transformer:convert_date:16 - Transforming date column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
 2025-08-28 11:54:35.363 | INFO     | project.transformer:currency_converter:30 - Transforming amount column for file /media/user/storage/Downloads/python/projects/file_processor/input/sample_data.csv
 2025-08-28 11:54:35.363 | INFO     | project.transformer:data_converter:41 - Converting dataframe to required output format
+2025-10-23 11:39:02.889 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv
+2025-10-23 11:39:02.890 | ERROR    | project.processor:process_file:28 - Failed to read file /home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv:[Errno 2] No such file or directory: '/home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv'

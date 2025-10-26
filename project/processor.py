@@ -3,12 +3,13 @@ import shutil
 import pandas as pd
 from pathlib import Path
 from json import loads, dumps
+from loguru import logger 
 from .validator import Validator
 from config.config import AppConfig
 from .transformer import Transformer
 
 
-def process_file(file_path: Path, cfg: AppConfig, logger):
+def process_file(file_path: Path, cfg: AppConfig):
     validator = Validator()
     output_dir = Path(cfg.output_dir)
     logger.info(f"Processing file: {file_path}")

@@ -1,0 +1,1 @@
+2025-10-23 11:39:02.890 | ERROR    | project.processor:process_file:28 - Failed to read file /home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv:[Errno 2] No such file or directory: '/home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv'
