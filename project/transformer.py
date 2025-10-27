@@ -1,6 +1,6 @@
 import pandas as pd
 from pathlib import Path
-from .logging import Logger
+from loguru import logger
 from config.config import AppConfig
 
 
@@ -8,12 +8,11 @@ class Transformer:
     def __init__(self, data: pd.DataFrame, file_path: Path, cfg: AppConfig):
         self.data = data
         self.file_path = file_path
-        self.logger = Logger(Path(cfg.logs_dir)).setup_logging()
         self.cfg = cfg
 
     def convert_date(self):
         # converting all date rows to the expected
-        self.logger.info(f"Transforming date column for file {self.file_path}")
+        logger.info(f"Transforming date column for file {self.file_path}")
         try:
             format = self.cfg.get("date_format", "%Y-%m-%d")
             if "date" in self.data.columns:
@@ -23,22 +22,22 @@ class Transformer:
                 return {"status": "success"}
             return {"status": "failed"}
         except Exception as e:
-            self.logger.error(f"Date conversion error for file {self.file_path}: {e}")
+            logger.error(f"Date conversion error for file {self.file_path}: {e}")
             return {"status": "error"}
 
     def currency_converter(self, rate: str):
-        self.logger.info(f"Transforming amount column for file {self.file_path}")
+        logger.info(f"Transforming amount column for file {self.file_path}")
         try:
             self.data["amount"] = self.data["amount"] * rate
             return {"status": "success"}
         except Exception as e:
-            self.logger.error(
+            logger.error(
                 f"Currency conversion error for file {self.file_path}: {e}"
             )
             return {"status": "error"}
 
     def data_converter(self):
-        self.logger.info(f"Converting dataframe to required output format")
+        logger.info(f"Converting dataframe to required output format")
         format_mapper = {
             "json": self.data.to_json(orient="records"),
             "csv": self.data.to_csv(index=False),

@@ -18,20 +18,13 @@ class Validator:
         available_type: Dict[str, str],
     ):
         issues = []
-
         for column in required_type.keys():
+            print(column)
             if required_type[column] != available_type.get(column, None):
-                if column == "date":
-                    if available_type.get(column, None) in [
-                        "datetime64[ns]",
-                        "datetime64[ns, UTC]",
-                    ]:
-                        continue
-                    issues.append(column)
-                else:
-                    if available_type.get(column, None) == "object":
-                        continue
-                    issues.append(column)
+                print(f"Type {available_type.get(column)}")
+                if available_type.get(column, None) == "object":
+                    continue
+                issues.append(column)
 
         if issues:
             return {"status": "error", "mismatched_types": issues}

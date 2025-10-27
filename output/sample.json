@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Alice",
+    "date": null,
+    "amount": 16.0
+  },
+  {
+    "name": "Bob",
+    "date": null,
+    "amount": 32.8
+  },
+  {
+    "name": "Charlie",
+    "date": null,
+    "amount": 8.0
+  }
+]

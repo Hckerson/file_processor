@@ -47,6 +47,8 @@ def process_file(file_path: Path, cfg: AppConfig):
         return
 
     try:
+        print(f"Required {required_column_types}")
+        print(f"Available {column_available_types}")
         type_check = validator.validate_types(
             required_column_types, column_available_types
         )

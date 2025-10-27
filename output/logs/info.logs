@@ -16,3 +16,25 @@
 2025-08-28 11:54:35.363 | INFO     | project.transformer:data_converter:41 - Converting dataframe to required output format
 2025-10-23 11:39:02.889 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv
 2025-10-23 11:39:02.890 | ERROR    | project.processor:process_file:28 - Failed to read file /home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv:[Errno 2] No such file or directory: '/home/hckerson/Downloads/Backend/python/projects/file_processor/input/sample.csv'
+2025-10-27 01:42:52.146 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 01:42:52.147 | ERROR    | project.processor:process_file:28 - Failed to read file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv:[Errno 2] No such file or directory: '/home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv'
+2025-10-27 01:46:07.475 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 01:46:07.486 | ERROR    | project.processor:process_file:54 - Type validation failed for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv: ['date']
+2025-10-27 01:54:06.797 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 01:54:06.801 | ERROR    | project.processor:process_file:54 - Type validation failed for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv: ['date']
+2025-10-27 01:59:09.073 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 01:59:09.073 | ERROR    | project.processor:process_file:28 - Failed to read file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv:[Errno 2] No such file or directory: '/home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv'
+2025-10-27 02:00:23.309 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:00:23.313 | ERROR    | project.processor:process_file:56 - Type validation failed for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv: ['date']
+2025-10-27 02:02:22.333 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:02:22.336 | ERROR    | project.processor:process_file:56 - Type validation failed for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv: ['date']
+2025-10-27 02:03:46.498 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:03:46.502 | ERROR    | project.processor:process_file:56 - Type validation failed for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv: ['date']
+2025-10-27 02:05:43.207 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:05:43.211 | ERROR    | project.processor:process_file:56 - Type validation failed for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv: ['date']
+2025-10-27 02:06:17.151 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:06:17.188 | ERROR    | project.processor:process_file:94 - transformation failed for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv: 'NoneType' object has no attribute 'info'
+2025-10-27 02:12:40.464 | INFO     | project.processor:process_file:15 - Processing file: /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:12:40.468 | INFO     | project.transformer:convert_date:15 - Transforming date column for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:12:40.470 | INFO     | project.transformer:currency_converter:29 - Transforming amount column for file /home/hckerson/Downloads/Backend/python/projects/file_processor/data/sample.csv
+2025-10-27 02:12:40.471 | INFO     | project.transformer:data_converter:40 - Converting dataframe to required output format
